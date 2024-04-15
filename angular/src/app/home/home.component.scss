@@ -1,0 +1,349 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.your-deal-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .bg-img {
+      width: 100%;
+      height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url("../../assets/images/bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      backdrop-filter: grayscale(0);
+
+      .txt-img {
+          margin-top: 100px;
+          width: 100%;
+          height: 100px;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 70px;
+          color: #ffffff;
+          border: 10px solid white;
+          padding: 100px 30px;
+      }
+
+      .head {
+          width: 100%;
+          height: 50px;
+          padding: 50px 80px;
+          margin-bottom: 70px;
+          position: absolute;
+          top: 0;
+          display: flex;
+          filter: grayscale(0);
+          flex-direction: column;
+          justify-content: center;
+
+          img {
+              height: 200px;
+              width: 200px;
+              object-fit: contain;
+          }
+
+          h1 {
+              color: #ffffff;
+              position: absolute;
+              margin-top: 100px;
+              font-weight: 800;
+          }
+      }
+  }
+
+  .about {
+      height: 60vh;
+      overflow: hidden;
+      $h1-color: #2c3145;
+      $a-color: #00bd2a;
+      $section-padding: 80px;
+      $section-border-width: 13px;
+      $section-border-color: #000;
+      $section-border-white-color: #fff;
+      $about-icon-bg: #fff;
+      $about-icon-color: #00bd2a;
+      $about-icon-box-shadow-color: rgba(158, 152, 153, 0.5);
+
+      $h2-color: $h1-color;
+      $h3-color: $h1-color;
+      $h4-color: $h1-color;
+      $h5-color: $h1-color;
+      $h6-color: $h1-color;
+      $a-hover-color: $a-color;
+
+      @mixin no-decoration {
+          text-decoration: none;
+          outline: none;
+      }
+
+      @mixin list-reset {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+
+      .section_all {
+          position: relative;
+          padding-top: $section-padding;
+          padding-bottom: $section-padding;
+          min-height: 100vh;
+
+          h1, h2, h3, h4, h5, h6 {
+              color: $h1-color;
+          }
+      }
+
+      .section-title {
+          font-weight: 700;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+      }
+
+      .section-subtitle {
+          letter-spacing: 0.4px;
+          line-height: 28px;
+          max-width: 550px;
+      }
+
+      .section-title-border {
+          background-color: $section-border-color;
+          height: $section-border-width;
+          width: 44px;
+      }
+
+      .section-title-border-white {
+          background-color: $section-border-white-color;
+          height: 2px;
+          width: 100px;
+      }
+
+      .text_custom {
+          color: $a-color;
+      }
+
+      .about_icon i {
+          font-size: 22px;
+          height: 65px;
+          width: 65px;
+          line-height: 65px;
+          display: inline-block;
+          background: $about-icon-bg;
+          border-radius: 35px;
+          color: $about-icon-color;
+          box-shadow: 0 8px 20px -2px $about-icon-box-shadow-color;
+      }
+
+      .about_header_main .about_heading {
+          max-width: 450px;
+          font-size: 24px;
+      }
+
+      .about_icon span {
+          position: relative;
+          top: -10px;
+      }
+
+      .about_content_box_all {
+          padding: 28px;
+      }
+
+      a {
+          @include no-decoration;
+
+          &:hover, &:focus, &:active {
+              color: $a-hover-color;
+          }
+      }
+
+      ul {
+          @include list-reset;
+      }
+  }
+}
+
+.line {
+  height: 40vh;
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  .box {
+      width: 550px;
+      padding: 0px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      transform: scale(0.95);
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+          cursor: pointer;
+          transform: scale(1);
+          transition: all ease-in-out 0.3s;
+      }
+      .delete{
+        background-color: red;
+        color: white;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        position: absolute;
+        top:0;
+        right: 0;
+        margin: 10px 10px;
+        border-radius: 7px;
+        box-shadow: 10px 20px 30px solid black;
+        transition: all ease-in-out 0.2s;
+        &:hover{
+          transform: scale(1.05);
+          background-color: rgb(123, 14, 14);
+          transition: all ease-in-out 0.2s;
+        }
+      }
+      .box-top {
+          width: 500px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          .box-image {
+              width: 550px;
+              height: 250px;
+              object-fit: cover;
+              object-position: 50% 20%;
+          }
+
+          .box-cat {
+              color: #211e1ec0;
+          }
+
+          .title-flex {
+              margin-top: 20px;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          .details {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              margin: 20px;
+
+              p {
+                  color: #65646482;
+                  font-weight: 800;
+              }
+          }
+
+          .user-follow-info {
+              color: hsl(0, 0%, 60%);
+          }
+      }
+
+      .price {
+          width: 100%;
+          margin: 10px;
+
+          p {
+              width: 100%;
+              color: rgb(67, 120, 170);
+              font-size: xx-large;
+              font-weight: 600;
+              display: flex;
+              align-items: flex-start;
+          }
+      }
+
+      .bottom {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          h2 {
+              font-size: medium;
+              color: #fffafadf;
+              padding: 5px 30px;
+              border-radius: 3px;
+          }
+          .button {
+              width: 200px;
+              display: block;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              margin-top: auto;
+              padding: 16px;
+              color: #000;
+              background: transparent;
+              box-shadow: 0px 0px 0px 1px black inset;
+              transition: all 0.4s ease;
+              font-weight: 600;
+              text-decoration: none;
+              &:hover {
+                  cursor: pointer;
+                  background-color: #1ca11cf8;
+                  color: #eeeeee;
+              }
+          }
+          .box-cat{
+            background-color: #bacf42;
+          }
+          .box-cat {
+              &-Villa {
+                  background-color: rgb(221, 10, 63);
+              }
+
+              &-Resort {
+                  background-color: rgb(20, 104, 182);
+              }
+
+              &-House {
+                  background-color: rgb(182, 93, 20);
+              }
+
+              &-FarmHouse {
+                  background-color: rgb(13, 122, 14);
+              }
+
+              &-Flat {
+                  background-color: rgb(136, 20, 182);
+              }
+          }
+      }
+  }
+}

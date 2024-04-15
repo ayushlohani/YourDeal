@@ -1,0 +1,100 @@
+<div class="your-deal-home">
+  <div class="bg-img"><div class="head"><img src="../../assets/images/head-logo.png"><h1>Your Deal</h1></div>
+  <div class="buy-deal">
+    <!-- <div class="bd">
+      <img src="../../assets/images/buyer.png">
+      <h3>Enter as Buyer</h3>
+    </div>
+    <div class="bd">
+      <img src="../../assets/images/dealer.png">
+      <h3>Enter as Dealer</h3>
+    </div> -->
+    <h1 class="txt-img">Premium Residences</h1>
+  </div>
+  <div class="images">
+     <!--<div class="img" *ngFor="let x of getJsonValue">
+    <img src={{x.imageUrl}}> -->
+    <!--<img src="../../assets/home-images.png"> -->
+  </div> </div>
+  
+  <div class="about">
+    <section class="section_all bg-light" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="section_title_all text-center">
+                      <h3 class="font-weight-bold">Welcome To <span class="text-custom">Your Deal</span></h3>
+                      <p class="section_subtitle mx-auto text-muted">We give the best Premium Residences. <br/>Make Your Home Dream Come True With Us.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col-lg-4">
+                  <div class="about_content_box_all mt-3">
+                      <div class="about_detail text-center">
+                          <div class="about_icon">
+                              <i class="fas fa-pencil-alt"></i>
+                          </div>
+                          <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Comment</h5>
+                          <p class="edu_desc mt-3 mb-0 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col-lg-4">
+                  <div class="about_content_box_all mt-3">
+                      <div class="about_detail text-center">
+                          <div class="about_icon">
+                              <i class="fab fa-angellist"></i>
+                          </div>
+                          <h5 class="text-dark text-capitalize mt-3 font-weight-bold">We Give Best Result</h5>
+                          <p class="edu_desc mb-0 mt-3 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col-lg-4">
+                  <div class="about_content_box_all mt-3">
+                      <div class="about_detail text-center">
+                          <div class="about_icon">
+                              <i class="fas fa-paper-plane"></i>
+                          </div>
+                          <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Best Platform</h5>
+                          <p class="edu_desc mb-0 mt-3 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  </div>
+  
+  <div class="wrap">
+    <div *ngFor="let x of getJsonValue" class="box">
+      <div class="delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      <div class="box-top">
+        <img class="box-image" [src]="x.imageUrl" />
+        <div class="title-flex">
+          <h3 class="box-title">{{ x.name }}</h3>
+          <p class="user-follow-info">{{ x.city }}, {{ x.state }}, {{ x.country }}</p>
+        </div>
+        <p class="description">{{ x.description }}</p>
+        <div class="details">
+          <p class="det">{{ 'Area: ' + x.sqft + 'Sqft' }}</p>
+          <p class="det">{{ 'Owner: ' + x.ownerName }}</p>
+          <p class="det">{{ 'Contact: ' + x.ownerPhoneNo }}</p>
+        </div>
+      </div>
+      <div class="price">
+        <p>{{ '$' + x.price }}</p>
+      </div>
+      <div class="bottom">
+        <a href="#" class="button">Book Now</a>
+        <h2 [ngClass]="x.catogary === 'Villa' || x.catogary === 'Flat' || x.catogary === 'Resort' || x.catogary === 'FarmHouse' || x.catogary === 'House' ? 'box-cat-' + x.catogary: 'box-cat'">{{ x.catogary }}</h2>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
