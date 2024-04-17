@@ -4,6 +4,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageComponent } from '@abp/ng.components/page';
+import { ToasterService } from '@abp/ng.theme.shared';
 
 @NgModule({
   declarations: [HomeComponent],

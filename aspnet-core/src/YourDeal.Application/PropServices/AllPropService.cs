@@ -66,10 +66,18 @@ namespace YourDeal.PropServices
         {
             try
             {
-                var PropObj = await this._propRepository.FindAsync(Prop.Id);
+                var PropObj = await this._propRepository.FindAsync(id);
                 if (PropObj != null)
                 {
-                    ObjectMapper.Map<PropDTO, PropModel>(Prop, PropObj);
+                    PropObj.Name = Prop.Name;
+                    PropObj.Catogary = Prop.Catogary;
+                    PropObj.Status = Prop.Status;
+                    PropObj.Description = Prop.Description;
+                    PropObj.City = Prop.City;
+                    PropObj.State = Prop.State;
+                    PropObj.Country = Prop.Country;
+                    PropObj.SQFT = Prop.SQFT;
+                    PropObj.Price = Prop.Price;
                     var PropReturnObj = await this._propRepository.UpdateAsync(PropObj);
                     return new OkObjectResult(PropReturnObj);
                 }

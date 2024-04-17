@@ -72,7 +72,8 @@
   
   <div class="wrap">
     <div *ngFor="let x of getJsonValue" class="box">
-      <div class="delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      <div class="delete" (click)="delete(x.id)"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      
       <div class="box-top">
         <img class="box-image" [src]="x.imageUrl" />
         <div class="title-flex">
@@ -95,6 +96,70 @@
       </div>
     </div>
   </div>
-  
-
 </div>
+<div>
+  <div class="post">
+    <h1>Post Your Property</h1>
+      <form>
+        <div class="form-flex">
+        <input type="text" class="in_box" #p_name placeholder="Enter Property Name">
+        <input type="text" class="in_box" #category placeholder="Category"></div>
+        <div class="form-flex">
+        <input type="text" class="in_box" placeholder="Owner Name" #o_name>
+        <input type="text" class="in_box"  placeholder="Owner PhoneNo" #ph_No></div>
+        <div class="form-flex">
+        <input type="text" class="in_box" placeholder="Area(Sqft)" #sqrt> 
+        <input type="number" class="in_box" placeholder="Price" #cost></div>
+        <div class="form-flex">
+        <input type="text" class="a_box" placeholder="City" #seher>
+        <input type="text" class="a_box" placeholder="state" #rajya>
+        <input type="text" class="a_box" placeholder="Country" #cou ></div>
+        <input type="text" class="img_box" placeholder="Image Url" #url>
+        <input type="text" class="des_box" placeholder="Description" #dec>
+        <button class="submit"  (click)="create(p_name.value,category.value,url.value,o_name.value,ph_No.value,sqrt.value,cost.value,seher.value,rajya.value,cou.value,dec.value)">Post</button>
+      </form>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
